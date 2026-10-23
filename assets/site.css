@@ -1,0 +1,566 @@
+/*
+  quintinorsmond.dev
+  Plain CSS, no build step. The colours, type and layout carry over from the
+  2020 Gatsby version of the site; only the structure underneath changed.
+*/
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 100; font-display: swap; src: url(fonts/roboto-latin-100.woff2) format("woff2"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/roboto-latin-400.woff2) format("woff2"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/roboto-latin-500.woff2) format("woff2"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/roboto-latin-700.woff2) format("woff2"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 900; font-display: swap; src: url(fonts/roboto-latin-900.woff2) format("woff2"); }
+
+:root {
+  --cream: #f5e7cb;
+  --cream-light: #fdf5e8;
+  --cream-active: #dfcfae;
+  --rule: #b8af9d;
+  --blue: #035c96;
+  --navy: #002f4e;
+  --brown: #855618;
+  --quote: #795548;
+  --ink: rgba(0, 0, 0, 0.8);
+  --muted: #6b5b3e;
+  --charcoal: #252831;
+  --footer-text: #c5c5c5;
+  --page: #fafafa;
+  --heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --gutter-left: 1.45rem;
+  --gutter-right: 1.0875rem;
+}
+
+/* Base */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font: 112.5%/1.45 Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (max-width: 480px) {
+  html { font-size: 100%; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--ink);
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main { flex: auto; }
+
+h1, h2, h3 {
+  margin: 0 0 1.45rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.1;
+  text-rendering: optimizeLegibility;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.62671rem; }
+h3 { font-size: 1.38316rem; }
+
+p, ul, figure { margin: 0 0 1.45rem; padding: 0; }
+img { max-width: 100%; height: auto; border: 0; }
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -100px;
+  z-index: 10;
+  padding: 8px 14px;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 4px;
+}
+.skip-link:focus { top: 8px; }
+
+.container {
+  max-width: 1255px;
+  margin: 0 auto;
+  padding: 0 var(--gutter-right) 0 var(--gutter-left);
+}
+
+/* Links inside running text */
+
+.prose a,
+.text-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+.prose a:hover,
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* Navigation */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  padding: 10px 10px;
+  background: var(--cream);
+}
+
+.site-nav .home { display: flex; margin-right: 8px; }
+.site-nav .home svg { width: 65px; height: auto; }
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav ul a {
+  display: inline-block;
+  min-width: 44px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  color: var(--navy);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background-color 250ms;
+}
+.site-nav ul a:hover { background: rgba(0, 47, 78, 0.06); }
+.site-nav ul a[aria-current="page"] { background: var(--cream-active); }
+
+/* Hero */
+
+.hero {
+  background: var(--cream);
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-plain { background: var(--cream); }
+
+.hero-inner {
+  display: flex;
+  flex-flow: column-reverse;
+  max-width: 1255px;
+  margin: 0 auto;
+}
+
+.hero-lead {
+  flex: 1 1;
+  align-self: center;
+  width: 100%;
+  padding: 0 var(--gutter-right) 0 var(--gutter-left);
+}
+
+.hero h1 {
+  margin: 16px 0 1.2rem;
+  font-size: 10vw;
+  color: var(--blue);
+}
+
+.hero .tagline {
+  margin: 0 0 1.45rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.15;
+  font-size: 7vw;
+  color: var(--brown);
+}
+
+/* On phones the photo sits above the name; kept smaller so the name is on the first screen */
+.hero-photo {
+  flex: 1 1;
+  margin: 0 -60px 0 20%;
+}
+.hero-photo img { display: block; margin: 0; }
+
+@media (min-width: 600px) {
+  .hero h1 { font-size: 6vw; }
+  .hero .tagline { font-size: 4.5vw; }
+}
+
+@media (min-width: 760px) {
+  .site-nav { padding-left: 10px; }
+  .site-nav .home svg { width: 80px; }
+  .site-nav ul { gap: 4px 12px; }
+
+  .hero-inner { flex-flow: row; }
+  .hero-lead { padding-left: calc(var(--gutter-left) + 24px); }
+  .hero h1 { font-size: 5vw; }
+  .hero .tagline { font-size: 3vw; max-width: 15em; }
+  .hero-photo { margin: 0 -100px 0 auto; }
+}
+
+@media (min-width: 1555px) {
+  .hero h1 { font-size: 5rem; }
+  .hero .tagline { font-size: 2.9rem; }
+}
+
+/* Running text */
+
+.intro { margin: 38px 0; }
+
+.lead {
+  margin: 20px 0 1.45rem;
+  padding: 0 0 14px 1.5rem;
+  border-left: 5px solid var(--quote);
+  color: var(--quote);
+  font-size: 140%;
+  line-height: 1.4;
+}
+
+.prose { max-width: 46rem; }
+.prose p { font-size: 118%; }
+
+@media (min-width: 760px) {
+  .intro { margin: 60px 30px; }
+  .lead { font-size: 165%; }
+  .prose p { font-size: 135%; }
+}
+
+.section { margin: 0 0 64px; }
+@media (min-width: 760px) {
+  .section { margin: 0 30px 80px; }
+}
+
+.section-title { color: var(--blue); }
+
+.section-intro { max-width: 46rem; }
+.section-intro p { font-size: 118%; }
+@media (min-width: 760px) {
+  .section-intro p { font-size: 125%; }
+}
+
+/* What I'm working on: links out to Bits to Live By */
+
+.work-list {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .work-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px 20px;
+  background: var(--cream-light);
+  border: 1px solid var(--cream-active);
+  border-left: 5px solid var(--blue);
+  border-radius: 4px;
+}
+
+.work-item .kind {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.work-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.work-item h3 a { color: var(--blue); }
+.work-item h3 a:hover { text-decoration: underline; text-underline-offset: 0.15em; }
+
+.work-item p { margin-bottom: 14px; font-size: 1rem; }
+
+.work-item .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: auto 0 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+/* Where my time has gone */
+
+.areas {
+  display: grid;
+  gap: 8px 48px;
+  margin: 32px 0 0;
+}
+
+@media (min-width: 900px) {
+  .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.areas h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+
+.areas p { font-size: 1rem; }
+
+.sign-off {
+  max-width: 46rem;
+  font-size: 118%;
+}
+@media (min-width: 760px) {
+  .sign-off { font-size: 125%; }
+}
+
+/* Projects */
+
+.project-group-title {
+  margin: 56px 0 8px;
+  color: var(--blue);
+}
+
+.project {
+  display: flex;
+  flex-flow: column;
+  margin: 30px 0 0;
+}
+
+@media (min-width: 760px) {
+  .project { flex-flow: row; margin: 50px 10px 12px; }
+}
+
+.project-mark {
+  flex: none;
+  height: 114px;
+  margin: 14px 8px;
+}
+.project-mark svg,
+.project-mark img { height: 100%; width: auto; margin: 0; }
+
+@media (min-width: 760px) {
+  .project-mark { width: 190px; height: 190px; margin: 20px; }
+  .project-mark.farm-it { width: 260px; height: auto; }
+  .project-mark.farm-it img { width: 100%; height: auto; }
+}
+
+.project-body { flex: 1; min-width: 0; }
+
+/* Newer projects have no logo column, so they line up with their heading */
+.project.recent { margin: 36px 0 0; }
+.project.recent .about { margin-left: 0; margin-right: 0; }
+.project.recent .project-slogan { margin-left: 0; color: var(--muted); }
+
+.project-body .about { margin: 24px 0; font-size: 118%; }
+.project-body .about p { max-width: 46rem; }
+
+@media (min-width: 760px) {
+  .project-body .about { margin: 24px 10px; }
+}
+
+.project h3 { margin-top: 2rem; color: var(--navy); }
+
+.stack-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.project code {
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  font-family: SFMono-Regular, Consolas, "Roboto Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.project-title { margin: 0; }
+
+.framealot-banner {
+  display: inline-block;
+  padding: 10px 10px 0 0;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 43px;
+  line-height: 1.2;
+}
+.framealot-banner .frame { font-weight: 900; color: var(--charcoal); }
+.framealot-banner .alot { margin-left: 2px; font-weight: 100; color: #0277bd; }
+
+.project-slogan { display: block; font-size: 16px; }
+.project-url { display: inline-block; margin: 8px 0; color: var(--blue); font-size: 16px; }
+
+@media (min-width: 760px) {
+  .framealot-banner { padding-left: 10px; }
+  .project-slogan, .project-url { margin-left: 10px; }
+}
+
+.fit-banner {
+  display: block;
+  margin: 0;
+  color: #000;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 52px;
+}
+
+.recent-banner {
+  display: block;
+  margin: 0;
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.stack-list li {
+  display: flex;
+  align-items: center;
+  margin: 12px;
+}
+
+.stack-list img {
+  flex: none;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  object-fit: contain;
+}
+
+.stack-list p {
+  max-width: 390px;
+  margin: 0 12px;
+  font-size: 90%;
+}
+
+.project-gallery { margin: 20px; }
+.project-gallery > p { max-width: 46rem; font-size: 118%; }
+
+.gallery {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+@media (min-width: 760px) {
+  .gallery { flex-flow: row; }
+}
+.gallery figure { flex: 1 1; margin: 0; }
+.gallery img { display: block; width: 100%; margin: 0; }
+.gallery figcaption { margin-top: 6px; text-align: center; }
+
+.divider { border: 0; border-bottom: 1px solid var(--rule); margin: 0; }
+
+/* Contact */
+
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 14px;
+  margin: 24px 0;
+}
+.email svg { width: 120px; height: auto; }
+.email span {
+  color: var(--blue);
+  font-size: 130%;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+.email:hover span { text-decoration-thickness: 2px; }
+
+@media (min-width: 760px) {
+  .email { justify-content: start; }
+  .email svg { width: 200px; }
+  .email span { font-size: 180%; }
+}
+
+.elsewhere {
+  margin: 0;
+  list-style: none;
+  font-size: 118%;
+}
+.elsewhere li { margin-bottom: 0.6rem; }
+
+/* 404 */
+
+.not-found-photo {
+  flex: 1 1;
+  margin: 0 -20px 0 -90px;
+  background: var(--cream);
+}
+.not-found-photo img { display: block; margin: 0; }
+@media (min-width: 760px) {
+  .not-found-photo { margin-left: auto; }
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: 70px;
+  padding: 20px 0;
+  border-top: 12px solid var(--blue);
+  background: var(--charcoal);
+  color: var(--footer-text);
+  font-size: 16px;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.site-footer .credit { margin: 0; flex: 1 1 auto; }
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer a { display: inline-flex; align-items: center; color: var(--footer-text); }
+.site-footer a:hover { color: #fff; }
+.site-footer .text-only { text-decoration: underline; text-underline-offset: 0.2em; }
+.site-footer svg { width: 36px; height: 36px; }
+.site-footer :focus-visible { outline-color: #fff; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
