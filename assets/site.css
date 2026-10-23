@@ -557,8 +557,9 @@ section > .divider { margin: 40px 0 0; }
 
 .site-footer a { display: inline-flex; align-items: center; color: var(--footer-text); }
 .site-footer a:hover { color: #fff; }
-.site-footer .text-only { text-decoration: underline; text-underline-offset: 0.2em; }
-.site-footer svg { width: 36px; height: 36px; }
+.site-footer svg,
+.site-footer img { width: 36px; height: 36px; margin: 0; }
+.site-footer img { border-radius: 3px; }
 .site-footer :focus-visible { outline-color: #fff; }
 
 .visually-hidden {
