@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects · Quintin Orsmond</title>
-  <meta name="description" content="FeatureKit, Baseline, Tokens, Layouts, Behaviors, Framealot, and GIS for agriculture at Farm-IT: things Quintin Orsmond has built, and what they taught him.">
+  <meta name="description" content="FeatureKit and Baseline, Tokens, Layouts, Behaviors, which Quintin Orsmond is building now, and earlier work: Framealot, and GIS for agriculture at Farm-IT.">
   <link rel="canonical" href="https://quintinorsmond.dev/projects/">
   <meta name="author" content="Quintin Orsmond">
   <meta name="theme-color" content="#f5e7cb">
@@ -36,8 +36,8 @@
       </a>
       <ul>
         <li><a href="/projects/" aria-current="page">Projects</a></li>
-        <li><a href="https://www.bitstoliveby.com/writing/">Writing</a></li>
-        <li><a href="https://www.linkedin.com/in/quintinorsmond/">Resume</a></li>
+        <li><a class="external" href="https://www.bitstoliveby.com/writing/">Writing<span class="visually-hidden">, on Bits to Live By</span></a></li>
+        <li><a class="external" href="https://www.linkedin.com/in/quintinorsmond/">Resume<span class="visually-hidden">, on LinkedIn</span></a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
@@ -53,10 +53,10 @@
     </section>
 
     <div class="container">
-      <section aria-labelledby="lately">
-        <h2 class="project-group-title" id="lately">Lately</h2>
+      <section aria-labelledby="building">
+        <h2 class="project-group-title" id="building">Still building</h2>
         <div class="section-intro">
-          <p>My newer work lives on <a class="text-link" href="https://www.bitstoliveby.com/">Bits to Live By</a>, which started in 2021 as a small blog of simple bits on getting stuff done and has grown into my engineering publication and lab. Each project there gets the full story: docs, design decisions, and the evidence for and against it. Here’s the short version.</p>
+          <p>These two are in active development on <a class="text-link" href="https://www.bitstoliveby.com/">Bits to Live By</a>, which started in 2021 as a small blog of simple bits on getting stuff done and has grown into my engineering publication and lab. That’s where each one gets the full story: docs, design decisions, and the evidence for and against it. Here’s the short version.</p>
         </div>
 
         <article class="project recent" aria-labelledby="featurekit">
@@ -95,116 +95,102 @@
       </section>
     </div>
 
-    <hr class="divider" style="margin-top: 50px">
+    <hr class="divider group-divider">
 
     <div class="container">
-      <section aria-labelledby="framealot">
-        <article class="project">
-          <div class="project-mark">
-            <a href="https://www.framealot.com/" tabindex="-1" aria-hidden="true">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 960 960"><path d="M0 .885h959.115V960H0z" fill="#374046"></path><path d="M152.516 168.968l147.52 140.8 362.277-3.488 144.13-137.498-327.056-3.355z" fill="#f5e7cb"></path><path d="M299.825 651.4L152.52 791.905l326.868 3.564 327.218-3.72-144.09-136.818z" fill="#f6e8cd"></path><path d="M806.275 168.906L662.13 306.31v338.644l.423 9.932L806.275 791.98V480.443z" fill="#fef7eb"></path><path d="M152.508 168.906V791.98l147.375-140.486v-342.1z" fill="#dfcfae"></path></svg>
-            </a>
-          </div>
+      <section aria-labelledby="earlier">
+        <h2 class="project-group-title" id="earlier">Earlier work</h2>
+        <div class="section-intro">
+          <p>Things I built before Bits to Live By. They’re not what I’m working on now, but a lot of what I know started with them.</p>
+        </div>
 
-          <div class="project-body">
-            <h2 class="project-title" id="framealot">
-              <a href="https://www.framealot.com/">
-                <span class="framealot-banner"><span class="frame">FRAME</span><span class="alot">ALOT</span></span>
-                <span class="project-slogan">Online custom framing made easy</span>
-                <span class="project-url">www.framealot.com</span>
+        <article aria-labelledby="framealot">
+          <div class="project">
+            <div class="project-mark">
+              <a href="https://www.framealot.com/" tabindex="-1" aria-hidden="true">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 960 960"><path d="M0 .885h959.115V960H0z" fill="#374046"></path><path d="M152.516 168.968l147.52 140.8 362.277-3.488 144.13-137.498-327.056-3.355z" fill="#f5e7cb"></path><path d="M299.825 651.4L152.52 791.905l326.868 3.564 327.218-3.72-144.09-136.818z" fill="#f6e8cd"></path><path d="M806.275 168.906L662.13 306.31v338.644l.423 9.932L806.275 791.98V480.443z" fill="#fef7eb"></path><path d="M152.508 168.906V791.98l147.375-140.486v-342.1z" fill="#dfcfae"></path></svg>
               </a>
-            </h2>
+            </div>
 
-            <div class="about">
-              <p>I love building things, and not only in code. I’ve been picture framing for years, and I’ve framed countless artworks, certificates, medals and just about anything else you can imagine.</p>
-              <p>It didn’t take long to realise software could make the framing easier, starting with working out what a frame would cost. That little price estimator, Qgo Framer, was the start of a passion project that grew into Framealot, an online shop where you design your own frame.</p>
-              <p>When it came to building the shop, I tried Magento, nopCommerce and Reaction Commerce, and none of them did quite what I had in mind. So I took a deep breath and built my own eCommerce platform from scratch. <span role="img" aria-label="Shocked">😲</span> It’s been my best teacher on the whole software life cycle, because when it’s your own product, every decision comes back to you.</p>
-              <p>When I built it, I picked my tools based on what I’d learnt as a full-stack developer:</p>
+            <div class="project-body">
+              <h3 class="project-title" id="framealot">
+                <a href="https://www.framealot.com/">
+                  <span class="framealot-banner"><span class="frame">FRAME</span><span class="alot">ALOT</span></span>
+                  <span class="project-slogan">Online custom framing made easy</span>
+                  <span class="project-url">www.framealot.com</span>
+                </a>
+              </h3>
 
-              <ul class="stack-list">
-                <li><img src="/assets/logos/stencil.svg" alt="" loading="lazy"><p>StencilJS for standards-based Web Components that run in every browser.</p></li>
-                <li><img src="/assets/logos/rxjs.svg" alt="" loading="lazy"><p>Reactive Extensions (RxJS) to manage the data flowing through the application.</p></li>
-                <li><img src="/assets/logos/jest.svg" alt="" loading="lazy"><p>Jest for unit testing components, with Puppeteer for end-to-end tests.</p></li>
-                <li><img src="/assets/logos/aspnet-core.svg" alt="" loading="lazy"><p>ASP.NET Core and EF Core for the backend services.</p></li>
-                <li><img src="/assets/logos/mariadb.svg" alt="" loading="lazy"><p>MariaDB for the database.</p></li>
-                <li><img src="/assets/logos/jenkins.svg" alt="" loading="lazy"><p>Jenkins to automate builds to the test environments, with continuous delivery to production.</p></li>
-              </ul>
+              <div class="about">
+                <p>I love building things, and not only in code. I’ve been picture framing for years, and I’ve framed countless artworks, certificates, medals and just about anything else you can imagine.</p>
+                <p>It didn’t take long to realise software could make the framing easier, starting with working out what a frame would cost. That little price estimator, Qgo Framer, was the start of a passion project that grew into Framealot, an online shop where you design your own frame.</p>
+                <p>When it came to building the shop, I tried Magento, nopCommerce and Reaction Commerce, and none of them did quite what I had in mind. So I took a deep breath and built my own eCommerce platform from scratch. <span role="img" aria-label="Shocked">😲</span> It’s been my best teacher on the whole software life cycle, because when it’s your own product, every decision comes back to you.</p>
+                <p class="built-with">I picked the tools based on what I’d learnt as a full-stack developer: StencilJS for Web Components that ran in every browser, RxJS for the data flowing through the app, ASP.NET Core and EF Core over MariaDB, Jest and Puppeteer for the tests, and Jenkins delivering continuously to production.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-gallery">
+            <p>The fun part is the frame builder, where you pick and choose the pieces that make up a frame, then zoom in for a closer look at your design.</p>
+            <div class="gallery">
+              <figure>
+                <img src="/assets/images/framealot-framebuilder-578.png" srcset="/assets/images/framealot-framebuilder-578.png 578w, /assets/images/framealot-framebuilder-1155.png 1155w" sizes="(min-width: 760px) 50vw, 100vw" width="1155" height="889" alt="The Framealot frame builder: a certificate in a brushed silver frame with slate blue and wine matboards, beside the item, frame and matboard details and a price" loading="lazy">
+                <figcaption>The frame builder, as it looked in 2020</figcaption>
+              </figure>
+              <figure>
+                <img src="/assets/images/framealot-framezoom-578.png" srcset="/assets/images/framealot-framezoom-578.png 578w, /assets/images/framealot-framezoom-1155.png 1155w" sizes="(min-width: 760px) 50vw, 100vw" width="1155" height="889" alt="The zoom view: a close-up of the corner of the silver frame and its matboards" loading="lazy">
+                <figcaption>Zoomed in on a design</figcaption>
+              </figure>
             </div>
           </div>
         </article>
 
-        <div class="project-gallery">
-          <p>The fun part is the frame builder, where you pick and choose the pieces that make up a frame, then zoom in for a closer look at your design.</p>
-          <div class="gallery">
-            <figure>
-              <img src="/assets/images/framealot-framebuilder-578.png" srcset="/assets/images/framealot-framebuilder-578.png 578w, /assets/images/framealot-framebuilder-1155.png 1155w" sizes="(min-width: 760px) 50vw, 100vw" width="1155" height="889" alt="The Framealot frame builder: a certificate in a brushed silver frame with slate blue and wine matboards, beside the item, frame and matboard details and a price" loading="lazy">
-              <figcaption>The frame builder, as it looked in 2020</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/images/framealot-framezoom-578.png" srcset="/assets/images/framealot-framezoom-578.png 578w, /assets/images/framealot-framezoom-1155.png 1155w" sizes="(min-width: 760px) 50vw, 100vw" width="1155" height="889" alt="The zoom view: a close-up of the corner of the silver frame and its matboards" loading="lazy">
-              <figcaption>Zoomed in on a design</figcaption>
-            </figure>
+        <hr class="divider">
+
+        <article aria-labelledby="farm-it">
+          <div class="project">
+            <div class="project-mark farm-it">
+              <img src="/assets/logos/farm-it.png" alt="" width="192" height="192">
+            </div>
+
+            <div class="project-body">
+              <h3 class="fit-banner" id="farm-it">Farm-IT</h3>
+
+              <div class="about">
+                <p>At Farm-IT I built desktop and web applications for the agricultural sector, and I was lucky enough to choose whatever stack best solved the problem in front of me. That freedom taught me that choosing your own stack is a big responsibility, because it shapes the whole life of a project.</p>
+                <p>I enjoyed designing interfaces that let people solve complex problems simply. I’m a firm believer that less is more, and in software that usually means less work for the person using it.</p>
+                <p>From the start I wanted these apps to work as well offline as online, and I was building web apps that way in 2012, before progressive web apps had a name.</p>
+
+                <h4>GeoLIS</h4>
+                <p>A GIS application silo managers used every day to run their operations. It was one of my first enterprise projects, finished in 2009 while I was still a junior developer, and it was still in daily use more than ten years later. I’m quietly very proud of that one.</p>
+                <p class="built-with">A Windows desktop app in WPF with the MVVM pattern and Dapper. It kept its data in SQLite and synchronised with SQL Server, so it carried on working offline, and its reports ran in SQL Server Reporting Services.</p>
+
+                <h4>GeoFarm</h4>
+                <p>A single-page application for agronomists, managing input budgets against what was actually spent, field by field on the map.</p>
+                <p class="built-with">It started on AngularJS and was later upgraded to Angular 4, with NgRx for state and OpenLayers showing vector and raster data from GeoServer. ASP.NET Web API and SQL Server sat behind it, and Jasmine and Karma tested the components.</p>
+
+                <p>A few of the GIS problems I wrote up at the time, like <a class="text-link" href="https://www.bitstoliveby.com/writing/mapguide-and-sql-server-2008/">getting MapGuide to serve SQL Server 2008 spatial data</a>, filtered per user. They’re in the archive on Bits to Live By, kept as they were written.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
 
-    <hr class="divider">
-
-    <div class="container">
-      <section aria-labelledby="farm-it">
-        <article class="project">
-          <div class="project-mark farm-it">
-            <img src="/assets/logos/farm-it.png" alt="" width="192" height="192">
-          </div>
-
-          <div class="project-body">
-            <h2 class="fit-banner" id="farm-it">Farm-IT</h2>
-
-            <div class="about">
-              <p>At Farm-IT I built desktop and web applications for the agricultural sector, and I was lucky enough to choose whatever stack best solved the problem in front of me. That freedom taught me that choosing your own stack is a big responsibility, because it shapes the whole life of a project.</p>
-              <p>I enjoyed designing interfaces that let people solve complex problems simply. I’m a firm believer that less is more, and in software that usually means less work for the person using it.</p>
-              <p>From the start I wanted these apps to work as well offline as online, and I was building web apps that way in 2012, before progressive web apps had a name.</p>
-
-              <h3>GeoFarm</h3>
-              <p>A single-page application for agronomists, managing input budgets against what was actually spent.</p>
-              <ul class="stack-list">
-                <li><img src="/assets/logos/angular.svg" alt="" loading="lazy"><p>Started on AngularJS, later upgraded to Angular 4.</p></li>
-                <li><img src="/assets/logos/ngrx.svg" alt="" loading="lazy"><p>NgRx Store for reactive state management.</p></li>
-                <li><img src="/assets/logos/openlayers.png" alt="" loading="lazy"><p>OpenLayers to show vector and raster data from a GeoServer endpoint.</p></li>
-                <li><img src="/assets/logos/jasmine.svg" alt="" loading="lazy"><p>Jasmine and the Karma test runner for unit testing components.</p></li>
-                <li><img src="/assets/logos/dotnet.svg" alt="" loading="lazy"><p>ASP.NET Web API on .NET 4.5 for the backend services.</p></li>
-                <li><img src="/assets/logos/sql-server.svg" alt="" loading="lazy"><p>SQL Server for the database.</p></li>
-              </ul>
-
-              <h3>GeoLIS</h3>
-              <p>A GIS application silo managers used every day to run their operations. It was one of my first enterprise projects, finished in 2009 while I was still a junior developer, and it was still in daily use more than ten years later. I’m quietly very proud of that one.</p>
-              <ul class="stack-list">
-                <li><img src="/assets/logos/dotnet.svg" alt="" loading="lazy"><p>A Windows application built with WPF and the MVVM pattern.</p></li>
-                <li><img src="/assets/logos/dapper.png" alt="" loading="lazy"><p>Dapper as the object-relational mapper.</p></li>
-                <li><img src="/assets/logos/sqlite.svg" alt="" loading="lazy"><p>SQLite for local storage, synchronised with SQL Server so it could keep working offline.</p></li>
-                <li><img src="/assets/logos/sql-server.svg" alt="" loading="lazy"><p>Reports in SQL Server Reporting Services.</p></li>
-              </ul>
+          <div class="project-gallery">
+            <p>These were internal systems, so there’s nothing public to link to.</p>
+            <div class="gallery">
+              <figure>
+                <img src="/assets/images/geolis-393.jpg" srcset="/assets/images/geolis-393.jpg 393w, /assets/images/geolis-785.jpg 785w" sizes="(min-width: 760px) 50vw, 100vw" width="785" height="496" alt="GeoLIS: a desktop window with map layers on the left, a map of land parcels in the middle and a list of records on the right" loading="lazy">
+                <figcaption>GeoLIS</figcaption>
+              </figure>
+              <figure>
+                <img src="/assets/images/geofarm-393.jpg" srcset="/assets/images/geofarm-393.jpg 393w, /assets/images/geofarm-785.jpg 785w" sizes="(min-width: 760px) 50vw, 100vw" width="785" height="496" alt="GeoFarm: a field list with planned and actual hectares beside a satellite map of centre-pivot fields shaded by soil chemistry" loading="lazy">
+                <figcaption>GeoFarm</figcaption>
+              </figure>
             </div>
           </div>
         </article>
-
-        <div class="project-gallery">
-          <p>These were internal systems, so there’s nothing public to link to.</p>
-          <div class="gallery">
-            <figure>
-              <img src="/assets/images/geofarm-393.jpg" srcset="/assets/images/geofarm-393.jpg 393w, /assets/images/geofarm-785.jpg 785w" sizes="(min-width: 760px) 50vw, 100vw" width="785" height="496" alt="GeoFarm: a field list with planned and actual hectares beside a satellite map of centre-pivot fields shaded by soil chemistry" loading="lazy">
-              <figcaption>GeoFarm</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/images/geolis-393.jpg" srcset="/assets/images/geolis-393.jpg 393w, /assets/images/geolis-785.jpg 785w" sizes="(min-width: 760px) 50vw, 100vw" width="785" height="496" alt="GeoLIS: a desktop window with map layers on the left, a map of land parcels in the middle and a list of records on the right" loading="lazy">
-              <figcaption>GeoLIS</figcaption>
-            </figure>
-          </div>
-        </div>
       </section>
 
-      <p class="sign-off">If you’d like to talk about any of these, <a class="text-link" href="/contact/">say hello</a>.</p>
+      <p class="sign-off">There are plenty more stories where these came from. If you’d like to hear one, <a class="text-link" href="/contact/">say hello</a>.</p>
     </div>
   </main>
   <footer class="site-footer">

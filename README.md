@@ -6,12 +6,12 @@ Plain HTML and CSS, served by GitHub Pages from `master`. There is no build step
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | Home: introduction, current work on Bits to Live By, where the years went |
-| `projects/index.html` | FeatureKit, Baseline, Tokens, Layouts, Behaviors, Framealot, Farm-IT |
+| `index.html` | Home: introduction, current work on Bits to Live By, where the years went, closing |
+| `projects/index.html` | Still building (FeatureKit; Baseline, Tokens, Layouts, Behaviors) and earlier work (Framealot, Farm-IT) |
 | `contact/index.html` | Contact |
 | `404.html` | Not found (GitHub Pages serves it for any missing path) |
 | `assets/site.css` | All the styles; colours are tokens at the top |
-| `assets/images`, `assets/logos`, `assets/fonts` | Photos, project stack logos, self-hosted Roboto |
+| `assets/images`, `assets/logos`, `assets/fonts` | Photos and screenshots, the Farm-IT logo, self-hosted Roboto |
 | `sitemap.xml`, `robots.txt` | For search engines; update `lastmod` when a page changes |
 
 The header and footer are repeated in each page, so a change to either goes in all four.

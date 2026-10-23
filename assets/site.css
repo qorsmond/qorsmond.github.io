@@ -146,6 +146,14 @@ a { color: inherit; text-decoration: none; }
 .site-nav ul a:hover { background: rgba(0, 47, 78, 0.06); }
 .site-nav ul a[aria-current="page"] { background: var(--cream-active); }
 
+/* Writing and Resume live on other sites; the arrow says so before the click */
+.site-nav .external::after {
+  content: "↗";
+  content: "↗" / "";
+  margin-left: 0.2em;
+  font-size: 0.85em;
+}
+
 /* Hero */
 
 .hero {
@@ -259,6 +267,8 @@ a { color: inherit; text-decoration: none; }
 
 @media (min-width: 900px) {
   .work-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .work-list .featured { grid-column: 1 / -1; }
+  .work-list .featured p:not(.kind) { max-width: 46rem; }
 }
 
 .work-item {
@@ -319,6 +329,18 @@ a { color: inherit; text-decoration: none; }
 
 .areas p { font-size: 1rem; }
 
+.section-note {
+  max-width: 46rem;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+/* The homepage ends where it started: in the first person, at reading size */
+.closing { margin: 0 0 1.45rem; }
+@media (min-width: 760px) {
+  .closing { margin: 0 30px 1.45rem; }
+}
+
 .sign-off {
   max-width: 46rem;
   font-size: 118%;
@@ -372,7 +394,19 @@ a { color: inherit; text-decoration: none; }
   .project-body .about { margin: 24px 10px; }
 }
 
-.project h3 { margin-top: 2rem; color: var(--navy); }
+.project .about h4 {
+  margin: 2rem 0 0.8rem;
+  font-family: var(--heading-font);
+  font-size: 1.38316rem;
+  line-height: 1.1;
+  color: var(--navy);
+}
+
+/* What a project was made with: there if you want it, quieter than the story */
+.built-with {
+  color: var(--muted);
+  font-size: 85%;
+}
 
 .stack-links {
   display: flex;
@@ -428,33 +462,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 2rem;
 }
 
-.stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0;
-  list-style: none;
-}
-
-.stack-list li {
-  display: flex;
-  align-items: center;
-  margin: 12px;
-}
-
-.stack-list img {
-  flex: none;
-  width: 50px;
-  height: 50px;
-  margin: 0;
-  object-fit: contain;
-}
-
-.stack-list p {
-  max-width: 390px;
-  margin: 0 12px;
-  font-size: 90%;
-}
-
 .project-gallery { margin: 20px; }
 .project-gallery > p { max-width: 46rem; font-size: 118%; }
 
@@ -471,6 +478,8 @@ a { color: inherit; text-decoration: none; }
 .gallery figcaption { margin-top: 6px; text-align: center; }
 
 .divider { border: 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.group-divider { margin-top: 50px; }
+section > .divider { margin: 40px 0 0; }
 
 /* Contact */
 
@@ -559,6 +568,11 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* A plain cross-fade between pages, where the browser supports it */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
